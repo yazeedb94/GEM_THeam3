@@ -84,7 +84,7 @@ const translations = {
     'contact.h2':     'مستعد\nللتحوّل؟',
     'contact.p':      'زرنا، اتصل بنا، أو أرسل رسالة. فريقنا جاهز لترحيب بك ومساعدتك في اختيار خطة العضوية المناسبة.',
     'contact.loc.label': 'موقعنا',
-    'contact.loc.val':   'عمان فقط',
+    'contact.loc.val':   'عمان، الأردن',
     'contact.phone.label': 'الهاتف / واتساب',
     'contact.phone.val':   '<span dir="ltr">0780 787 744</span>',
     'contact.hours.label': 'أوقات رئيسية',
