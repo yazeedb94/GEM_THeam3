@@ -1,0 +1,133 @@
+/* ═══════════════════════════════════════
+   THEME 3 — ANIMATIONS  (Neon Cyber)
+   ═══════════════════════════════════════ */
+
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(50px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+@keyframes neon-flicker {
+  0%,19%,21%,23%,25%,54%,56%,100% { opacity:1; }
+  20%,24%,55% { opacity:0.4; }
+}
+
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(-12px); }
+}
+
+@keyframes cyber-scan {
+  0%   { transform:translateY(-100%); opacity:0.6; }
+  100% { transform:translateY(100vh); opacity:0; }
+}
+
+@keyframes neon-glow-cyan {
+  0%,100% { text-shadow: 0 0 10px #06b6d4, 0 0 30px #06b6d4, 0 0 60px #06b6d4; }
+  50%      { text-shadow: 0 0 20px #06b6d4, 0 0 60px #06b6d4, 0 0 120px #06b6d4; }
+}
+
+@keyframes neon-border-pulse {
+  0%,100% { box-shadow: 0 0 8px #06b6d4, inset 0 0 8px rgba(6,182,212,0.1); }
+  50%      { box-shadow: 0 0 25px #06b6d4, 0 0 50px rgba(6,182,212,0.4), inset 0 0 15px rgba(6,182,212,0.2); }
+}
+
+@keyframes neon-border-pink {
+  0%,100% { box-shadow: 0 0 8px #ec4899, inset 0 0 8px rgba(236,72,153,0.1); }
+  50%      { box-shadow: 0 0 25px #ec4899, 0 0 50px rgba(236,72,153,0.4), inset 0 0 15px rgba(236,72,153,0.2); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position:0% 50%; }
+  50%  { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+@keyframes grid-move {
+  from { background-position:0 0; }
+  to   { background-position:60px 60px; }
+}
+
+@keyframes diagonal-wipe {
+  from { clip-path: polygon(0 0,0 0,0 100%,0 100%); }
+  to   { clip-path: polygon(0 0,100% 0,100% 100%,0 100%); }
+}
+
+@keyframes counter-pulse {
+  0%,100% { transform:scale(1); }
+  50%      { transform:scale(1.06); }
+}
+
+@keyframes line-grow {
+  from { width:0; }
+  to   { width:70px; }
+}
+
+@keyframes particle-rise {
+  0%   { transform:translateY(0) scale(1); opacity:.7; }
+  100% { transform:translateY(-100vh) scale(0); opacity:0; }
+}
+
+@keyframes glitch-1 {
+  0%,100% { clip-path:polygon(0 0,100% 0,100% 35%,0 35%); transform:translate(-3px,0); }
+  50%      { clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%); transform:translate(3px,0); }
+}
+
+@keyframes shimmer-neon {
+  0%   { background-position:-200% center; }
+  100% { background-position:200% center; }
+}
+
+/* ── REVEAL ── */
+.reveal {
+  opacity:0; transform:translateY(45px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+.reveal-left {
+  opacity:0; transform:translateX(-50px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal-left.visible { opacity:1; transform:translateX(0); }
+
+.reveal-right {
+  opacity:0; transform:translateX(50px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal-right.visible { opacity:1; transform:translateX(0); }
+
+.reveal-scale {
+  opacity:0; transform:scale(0.85);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal-scale.visible { opacity:1; transform:scale(1); }
+
+.delay-1 { transition-delay:.1s; }
+.delay-2 { transition-delay:.2s; }
+.delay-3 { transition-delay:.3s; }
+.delay-4 { transition-delay:.4s; }
+.delay-5 { transition-delay:.5s; }
+.delay-6 { transition-delay:.6s; }
+
+.hero-animate-1 { animation:fadeInUp .9s ease .2s both; }
+.hero-animate-2 { animation:fadeInUp .9s ease .5s both; }
+.hero-animate-3 { animation:fadeInUp .9s ease .8s both; }
+.hero-animate-4 { animation:fadeInUp .9s ease 1.1s both; }
+
+.float-anim { animation:float 4s ease-in-out infinite; }
+
+.shimmer-text {
+  background:linear-gradient(90deg,#06b6d4,#a5f3fc,#ec4899,#06b6d4);
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:shimmer-neon 4s linear infinite;
+}
+
+/* RTL flips */
+[dir="rtl"] .reveal-left  { transform:translateX(50px); }
+[dir="rtl"] .reveal-left.visible  { transform:translateX(0); }
+[dir="rtl"] .reveal-right { transform:translateX(-50px); }
+[dir="rtl"] .reveal-right.visible { transform:translateX(0); }

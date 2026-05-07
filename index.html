@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cytoflow | صالة رياضية فاخرة في عمّان</title>
+  <meta name="description" content="cytoflow — وجهتك الرياضية الفاخرة في عمّان. أحدث الأجهزة، مدربون محترفون." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>" />
+</head>
+<body class="rtl">
+
+<div class="scanline"></div>
+<div id="particles"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <div class="logo-icon">🏋️</div>
+    <div class="logo-text">
+      <span class="cyber-bracket">[</span> cytoflow <span class="cyber-bracket">]</span>
+      <span data-i18n="nav.subtitle">صالة رياضية فاخرة · عمّان</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about"    data-i18n="nav.about">من نحن</a></li>
+    <li><a href="#services" data-i18n="nav.services">خدماتنا</a></li>
+    <li><a href="#stats"    data-i18n="nav.results">إنجازاتنا</a></li>
+    <li><a href="#schedule" data-i18n="nav.schedule">أوقات الدوام</a></li>
+    <li><a href="#contact"  data-i18n="nav.contact">تواصل معنا</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button id="lang-toggle" class="lang-btn">EN</button>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta">انضم الآن</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Mobile -->
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-close" id="mobile-close">✕</span>
+  <a href="#about"    data-i18n="nav.about">من نحن</a>
+  <a href="#services" data-i18n="nav.services">خدماتنا</a>
+  <a href="#stats"    data-i18n="nav.results">إنجازاتنا</a>
+  <a href="#schedule" data-i18n="nav.schedule">أوقات الدوام</a>
+  <a href="#contact"  data-i18n="nav.contact">تواصل معنا</a>
+  <a href="#contact" class="btn-primary" style="margin-top:1rem" data-i18n="nav.cta">انضم الآن</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-cut"></div>
+  <div class="hero-content">
+    <div class="hero-label hero-animate-1">
+      <div class="hero-label-dot"></div>
+      <span data-i18n="hero.badge">وجهتك الرياضية الأولى في عمّان</span>
+    </div>
+    <h1 class="hero-title hero-animate-2">
+      <span class="cyan" data-i18n="hero.line1">اصنع</span><br>
+      <span data-i18n="hero.line2">نسخة</span><br>
+      <span data-i18n="hero.line3">أفضل</span>
+      <span class="pink" data-i18n="hero.gold"> منك</span>
+    </h1>
+    <p class="hero-sub hero-animate-3" data-i18n="hero.sub">
+      أحدث الأجهزة، ومدربون محترفون، وبيئة مصممة للأبطال. رحلة التحول تبدأ هنا.
+    </p>
+    <div class="hero-actions hero-animate-4">
+      <a href="#contact"  class="btn-primary"  data-i18n="hero.btn1">ابدأ اليوم ←</a>
+      <a href="#services" class="btn-secondary" data-i18n="hero.btn2">استكشف خدماتنا</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num shimmer-text" data-i18n="hero.stat1.num">+500</div>
+      <div class="lbl" data-i18n="hero.stat1.lbl">عضو نشط</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num shimmer-text" data-i18n="hero.stat2.num">24/7</div>
+      <div class="lbl" data-i18n="hero.stat2.lbl">وصول مستمر</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num shimmer-text" data-i18n="hero.stat3.num">+10</div>
+      <div class="lbl" data-i18n="hero.stat3.lbl">مدرب معتمد</div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>↓</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <img src="images/about-bg.png" alt="cytoflow" />
+        <div class="about-img-badge float-anim">
+          <div class="badge-num" data-i18n="about.badge.num">5★</div>
+          <div class="badge-lbl" data-i18n="about.badge.lbl">صالة مُقيَّمة</div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about.tag">من نحن</span>
+          <h2 class="section-title" data-i18n="about.title">مصنوعون<br><span style="color:var(--cyan)">للأبطال</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="about-text" data-i18n="about.text">نقع في قلب عمّان في مجمع العمر، وقد بُنيت cytoflow لغرض واحد — دفعك إلى ما هو أبعد من حدودك.</p>
+        <div class="about-features">
+          <div class="feature-item delay-1"><span class="icon">⚡</span><span data-i18n="about.f1">أجهزة متطورة</span></div>
+          <div class="feature-item delay-2"><span class="icon">🏅</span><span data-i18n="about.f2">مدربون خبراء</span></div>
+          <div class="feature-item delay-3"><span class="icon">🔥</span><span data-i18n="about.f3">دروس جماعية</span></div>
+          <div class="feature-item delay-4"><span class="icon">🥤</span><span data-i18n="about.f4">إرشاد تغذوي</span></div>
+          <div class="feature-item delay-5"><span class="icon">🚿</span><span data-i18n="about.f5">مرافق عصرية</span></div>
+          <div class="feature-item delay-6"><span class="icon">📱</span><span data-i18n="about.f6">تتبع التقدم</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="services.tag">ما نقدمه</span>
+      <h2 class="section-title" data-i18n="services.title">خدمات<br><span style="color:var(--cyan)">متميزة</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal delay-1">
+        <div class="service-icon-wrap">💪</div>
+        <h3 class="service-title" data-i18n="svc1.title">تدريب القوة</h3>
+        <p class="service-desc"  data-i18n="svc1.desc">أثقال حرة، أجهزة كابل، وأقفاص البوزاة — كل ما تحتاجه لبناء عضلات حقيقية وقوة وظيفية متكاملة.</p>
+        <span class="service-tag">STR_TRAINING</span>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-icon-wrap">🏃</div>
+        <h3 class="service-title" data-i18n="svc2.title">منطقة الكارديو</h3>
+        <p class="service-desc"  data-i18n="svc2.desc">أحدث أجهزة الجري والإليبتيكال والتجديف. أحرق الدهون وعزّز التحمّل.</p>
+        <span class="service-tag">CARDIO_ZONE</span>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-icon-wrap">🧘</div>
+        <h3 class="service-title" data-i18n="svc3.title">اللياقة الوظيفية</h3>
+        <p class="service-desc"  data-i18n="svc3.desc">مناطق CrossFit مع حبال البيتل والكيتل بل وصناديق البليومتريكس.</p>
+        <span class="service-tag">FUNC_FITNESS</span>
+      </div>
+      <div class="service-card reveal delay-4">
+        <div class="service-icon-wrap">🏆</div>
+        <h3 class="service-title" data-i18n="svc4.title">التدريب الشخصي</h3>
+        <p class="service-desc"  data-i18n="svc4.desc">جلسات فردية مع مدربين معتمدين يضعون برامج مخصصة لأهدافك.</p>
+        <span class="service-tag">PERS_TRAINING</span>
+      </div>
+      <div class="service-card reveal delay-5">
+        <div class="service-icon-wrap">👥</div>
+        <h3 class="service-title" data-i18n="svc5.title">الدروس الجماعية</h3>
+        <p class="service-desc"  data-i18n="svc5.desc">زومبا، هيت، يوغا، وسبين بقيادة مدربين متخصصين. تدرّب معاً.</p>
+        <span class="service-tag">GROUP_CLASS</span>
+      </div>
+      <div class="service-card reveal delay-6">
+        <div class="service-icon-wrap">🥗</div>
+        <h3 class="service-title" data-i18n="svc6.title">الخطط الغذائية</h3>
+        <p class="service-desc"  data-i18n="svc6.desc">خطط مخصصة من أخصائيي تغذية معتمدين لتعظيم تحولك الجسدي.</p>
+        <span class="service-tag">NUTRITION</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal delay-1">
+        <div class="stat-num" data-count="500" data-suffix="+" data-i18n-suffix="stat1.suf">0+</div>
+        <div class="stat-label" data-i18n="stat1.lbl">عضو نشط</div>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-num" data-count="10" data-suffix="+" data-i18n-suffix="stat2.suf">0+</div>
+        <div class="stat-label" data-i18n="stat2.lbl">مدرب معتمد</div>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-num" data-count="6" data-suffix="" data-i18n-suffix="stat3.suf">0</div>
+        <div class="stat-label" data-i18n="stat3.lbl">سنوات من التميز</div>
+      </div>
+      <div class="stat-item reveal delay-4">
+        <div class="stat-num" data-count="98" data-suffix="%" data-i18n-suffix="stat4.suf">0%</div>
+        <div class="stat-label" data-i18n="stat4.lbl">رضا الأعضاء</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="schedule.tag">أوقات العمل</span>
+      <h2 class="section-title" data-i18n="schedule.title">نحن هنا<br><span style="color:var(--cyan)">من أجلك</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="schedule-wrap">
+      <div class="schedule-card reveal-scale">
+        <div class="schedule-header">
+          <span style="font-size:1.3rem">🕐</span>
+          <h3 data-i18n="schedule.card.title">الجدول الأسبوعي</h3>
+        </div>
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.sat">السبت</span></span>
+            <span class="hours-badge limited" data-i18n="hours.sat">6:00 ص – 12:00 م</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.sun">الأحد</span></span>
+            <span class="hours-badge" data-i18n="hours.24">مفتوح 24 ساعة</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.mon">الإثنين</span></span>
+            <span class="hours-badge" data-i18n="hours.24">مفتوح 24 ساعة</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.tue">الثلاثاء</span></span>
+            <span class="hours-badge" data-i18n="hours.24">مفتوح 24 ساعة</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.wed">الأربعاء</span></span>
+            <span class="hours-badge" data-i18n="hours.24">مفتوح 24 ساعة</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot"></span><span data-i18n="day.thu">الخميس</span></span>
+            <span class="hours-badge limited" data-i18n="hours.thu">12:00 ص – 8:00 م</span>
+          </li>
+          <li class="schedule-item">
+            <span class="day-name"><span class="day-dot closed"></span><span data-i18n="day.fri">الجمعة</span></span>
+            <span class="hours-badge closed" data-i18n="hours.closed">مغلق</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="contact.tag">تواصل معنا</span>
+      <h2 class="section-title" data-i18n="contact.title">ابدأ رحلتك<br><span style="color:var(--cyan)">الآن</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <h2><span class="cyan" data-i18n="contact.h2">مستعد<br>للتحوّل؟</span></h2>
+        <p data-i18n="contact.p">زرنا، اتصل بنا، أو أرسل رسالة. فريقنا جاهز لترحيب بك.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <div class="c-text" data-i18n="contact.loc.label">موقعنا</div>
+              <div class="c-val"  data-i18n="contact.loc.val">عمان فقط</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <div class="c-text" data-i18n="contact.phone.label">الهاتف / واتساب</div>
+              <div class="c-val"><a href="tel:0780787744" style="color:inherit" data-i18n="contact.phone.val">0780 787 744</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">🕐</div>
+            <div>
+              <div class="c-text" data-i18n="contact.hours.label">أوقات رئيسية</div>
+              <div class="c-val"  data-i18n="contact.hours.val">الأحد – الأربعاء: مفتوح 24 ساعة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="fname" data-i18n="form.name">الاسم الكامل</label>
+            <input type="text" id="fname" data-i18n-ph="form.name.ph" placeholder="أحمد الخالد" required />
+          </div>
+          <div class="form-group">
+            <label for="femail" data-i18n="form.email">البريد الإلكتروني</label>
+            <input type="email" id="femail" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="fphone" data-i18n="form.phone">رقم الهاتف</label>
+            <input type="tel" id="fphone" placeholder="+962 7X XXX XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="fmsg" data-i18n="form.msg">الرسالة</label>
+            <textarea id="fmsg" data-i18n-ph="form.msg.ph" placeholder="أخبرنا عن أهدافك الرياضية..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit-btn">
+            <span data-i18n="form.submit">إرسال الرسالة ←</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map-section">
+  <div class="container">
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.7!2d35.8825889!3d31.9969329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDU5JzQ5LjAiTiAzNcKwNTInNTcuMyJF!5e0!3m2!1sen!2sjo!4v1683000000000!5m2!1sen!2sjo"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">cytoflow</div>
+  <p class="footer-tagline" data-i18n="footer.tagline">اصنع نسختك الأفضل · عمّان، الأردن</p>
+  <nav class="footer-links">
+    <a href="#about"    data-i18n="nav.about">من نحن</a>
+    <a href="#services" data-i18n="nav.services">خدماتنا</a>
+    <a href="#schedule" data-i18n="nav.schedule">أوقات الدوام</a>
+    <a href="#contact"  data-i18n="nav.contact">تواصل معنا</a>
+    <a href="tel:0780787744">0780 787 744</a>
+  </nav>
+  <p class="footer-copy"><span data-i18n="footer.copy">© 2025</span> <span>cytoflow</span>. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/962780787744" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
