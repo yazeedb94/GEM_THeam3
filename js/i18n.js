@@ -86,7 +86,7 @@ const translations = {
     'contact.loc.label': 'موقعنا',
     'contact.loc.val':   'عمان فقط',
     'contact.phone.label': 'الهاتف / واتساب',
-    'contact.phone.val':   '0780 787 744',
+    'contact.phone.val':   '<span dir="ltr">0780 787 744</span>',
     'contact.hours.label': 'أوقات رئيسية',
     'contact.hours.val':   'الأحد – الأربعاء: مفتوح 24 ساعة',
     'form.name':    'الاسم الكامل',
